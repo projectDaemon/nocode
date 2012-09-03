@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="AbstractFactory"
-	ProjectGUID="{401896CA-37D3-4CDC-9099-E35C0D28C756}"
-	RootNamespace="AbstractFactory"
+	Name="Facade"
+	ProjectGUID="{02BF29FD-E57C-497A-99D5-86F3DDDD651F}"
+	RootNamespace="Facade"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -166,7 +166,15 @@
 	</References>
 	<Files>
 		<File
-			RelativePath=".\AbstractFactory.cpp"
+			RelativePath=".\BurnCoreXAPI.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\BurnCoreXAPI.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Facade.cpp"
 			>
 		</File>
 	</Files>

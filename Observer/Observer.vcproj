@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="AbstractFactory"
-	ProjectGUID="{401896CA-37D3-4CDC-9099-E35C0D28C756}"
-	RootNamespace="AbstractFactory"
+	Name="Observer"
+	ProjectGUID="{424D69DE-A196-491F-A037-3F4D59CE0347}"
+	RootNamespace="Observer"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -166,7 +166,7 @@
 	</References>
 	<Files>
 		<File
-			RelativePath=".\AbstractFactory.cpp"
+			RelativePath=".\Observer.cpp"
 			>
 		</File>
 	</Files>

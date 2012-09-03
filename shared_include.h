@@ -5,6 +5,9 @@
 
 #include <iostream>
 #include <string>
+#include <list>
+#include <vector>
+#include <map>
 
 using std::cout;
 using boost::shared_ptr;
