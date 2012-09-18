@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
 	<Workspace title="DesignPattern">
-		<Project filename="Singleton/Singleton.cbp" active="1" />
+		<Project filename="Singleton/Singleton.cbp" />
+		<Project filename="AbstractFactory/AbstractFactory.cbp" />
+		<Project filename="Builder/Builder.cbp" />
+		<Project filename="Facade/Facade.cbp" />
+		<Project filename="Observer/Observer.cbp" active="1" />
 	</Workspace>
 </CodeBlocks_workspace_file>
