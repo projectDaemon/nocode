@@ -1,4 +1,4 @@
-#include "YBurnCore.h"
+#include "..\include\YBurnCore.h"
 
 YBurnCore::YBurnCore()
 {

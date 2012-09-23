@@ -1,4 +1,4 @@
-#include "XBurnCore.h"
+#include "..\include\XBurnCore.h"
 
 XBurnCore::XBurnCore()
 {

@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1348415527 source:e:\research\github\designpatterns\bridge\src\burnbridge.cpp
+	"..\include\XBurnCore.h"
+	"..\include\BurnBridge.h"
+
+1348414730 e:\research\github\designpatterns\bridge\include\xburncore.h
+	"IBurnCore.h"
+
+1348414730 e:\research\github\designpatterns\bridge\include\iburncore.h
+
+1348415292 e:\research\github\designpatterns\bridge\include\burnbridge.h
+	"IBurnCore.h"
+	"..\..\shared_include.h"
+
+1346571683 e:\research\github\designpatterns\shared_include.h
+	<boost/shared_ptr.hpp>
+	<boost/make_shared.hpp>
+	<iostream>
+	<string>
+	<list>
+	<vector>
+	<map>
+
+1348415539 source:e:\research\github\designpatterns\bridge\src\xburncore.cpp
+	"..\include\XBurnCore.h"
+
+1348415548 source:e:\research\github\designpatterns\bridge\src\yburncore.cpp
+	"..\include\YBurnCore.h"
+
+1348414730 e:\research\github\designpatterns\bridge\include\yburncore.h
+	"IBurnCore.h"
+
