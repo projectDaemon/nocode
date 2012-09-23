@@ -8,6 +8,7 @@
 		<Project filename="Observer/Observer.cbp" />
 		<Project filename="Composite/Composite.cbp" />
 		<Project filename="Prototype/Prototype.cbp" />
-		<Project filename="Adapter/Adapter.cbp" active="1" />
+		<Project filename="Adapter/Adapter.cbp" />
+		<Project filename="Bridge/Bridge.cbp" active="1" />
 	</Workspace>
 </CodeBlocks_workspace_file>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="include\BurnBridge.h" open="1" top="0" tabpos="2">
+		<Cursor position="169" topLine="0" />
+	</File>
+	<File name="include\IBurnCore.h" open="1" top="0" tabpos="4">
+		<Cursor position="121" topLine="0" />
+	</File>
+	<File name="include\XBurnCore.h" open="1" top="0" tabpos="5">
+		<Cursor position="250" topLine="0" />
+	</File>
+	<File name="include\YBurnCore.h" open="1" top="0" tabpos="7">
+		<Cursor position="274" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="108" topLine="0" />
+	</File>
+	<File name="src\BurnBridge.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="109" topLine="0" />
+	</File>
+	<File name="src\XBurnCore.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="254" topLine="0" />
+	</File>
+	<File name="src\YBurnCore.cpp" open="1" top="1" tabpos="8">
+		<Cursor position="232" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
