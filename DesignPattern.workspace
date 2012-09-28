@@ -10,6 +10,9 @@
 		<Project filename="Prototype/Prototype.cbp" />
 		<Project filename="Adapter/Adapter.cbp" />
 		<Project filename="Bridge/Bridge.cbp" />
-		<Project filename="ChainOfResponsiblity/ChainOfResponsiblity.cbp" active="1" />
+		<Project filename="ChainOfResponsiblity/ChainOfResponsiblity.cbp" />
+		<Project filename="Visitor/Visitor.cbp" />
+		<Project filename="Decorator/Decorator.cbp" />
+		<Project filename="Iterator/Iterator.cbp" active="1" />
 	</Workspace>
 </CodeBlocks_workspace_file>
