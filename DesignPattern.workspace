@@ -13,6 +13,8 @@
 		<Project filename="ChainOfResponsiblity/ChainOfResponsiblity.cbp" />
 		<Project filename="Visitor/Visitor.cbp" />
 		<Project filename="Decorator/Decorator.cbp" />
-		<Project filename="Iterator/Iterator.cbp" active="1" />
+		<Project filename="Iterator/Iterator.cbp" />
+		<Project filename="Proxy/Proxy.cbp" />
+		<Project filename="FlyWeight/FlyWeight.cbp" active="1" />
 	</Workspace>
 </CodeBlocks_workspace_file>
