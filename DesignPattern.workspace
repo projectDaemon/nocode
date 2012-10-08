@@ -15,6 +15,10 @@
 		<Project filename="Decorator/Decorator.cbp" />
 		<Project filename="Iterator/Iterator.cbp" />
 		<Project filename="Proxy/Proxy.cbp" />
-		<Project filename="FlyWeight/FlyWeight.cbp" active="1" />
+		<Project filename="FlyWeight/FlyWeight.cbp" />
+		<Project filename="Command/Command.cbp" />
+		<Project filename="Interpreter/Interpreter.cbp" />
+		<Project filename="Mediator/Mediator.cbp" />
+		<Project filename="Memento/Memento.cbp" active="1" />
 	</Workspace>
 </CodeBlocks_workspace_file>
