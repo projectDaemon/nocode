@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1349710176 source:e:\github\designpatterns\memento\main.cpp
+	<iostream>
+	"..\shared_include.h"
+
+1348746185 e:\github\designpatterns\shared_include.h
+	<boost/shared_ptr.hpp>
+	<boost/make_shared.hpp>
+	<iostream>
+	<string>
+	<list>
+	<vector>
+	<map>
+
