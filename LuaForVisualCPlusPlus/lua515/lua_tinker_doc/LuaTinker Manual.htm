@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0045)http://gpgstudy.com/gpgiki/LuaTinker%20Manual -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- phpwiki source:
+$Id: prepend.php,v 1.2 2005/03/17 16:58:59 gryu Exp $
+$Id: ErrorManager.php,v 1.3 2005/03/17 16:58:59 gryu Exp $
+$Id: index.php,v 1.13 2004/03/25 08:15:44 gryu Exp $
+$Id: config.php,v 1.3 2004/03/25 08:15:44 gryu Exp $
+$Id: FileFinder.php,v 1.3 2004/03/25 08:15:44 gryu Exp $
+$Id: stdlib.php,v 1.4 2005/03/17 16:58:59 gryu Exp $
+$Id: Request.php,v 1.3 2004/03/25 08:15:44 gryu Exp $
+$Id: WikiUser.php,v 1.8 2005/04/23 14:27:32 gryu Exp $
+$Id: WikiDB.php,v 1.3 2004/03/25 08:15:44 gryu Exp $
+$Id: SQL.php,v 1.1 2003/05/08 04:17:36 gryu Exp $
+$Id: mysql.php,v 1.1 2003/05/08 04:17:36 gryu Exp $
+$Id: PearDB.php,v 1.6 2005/04/22 18:37:41 gryu Exp $
+$Id: backend.php,v 1.1 2003/05/08 04:17:36 gryu Exp $
+$Id: display.php,v 1.2 2005/03/17 16:58:59 gryu Exp $
+$Id: interwiki.php,v 1.2 2003/09/08 05:29:36 gryu Exp $
+$Id: Template.php,v 1.2 2004/03/25 08:15:44 gryu Exp $
+$Id: WikiPlugin.php,v 1.4 2004/03/25 08:15:44 gryu Exp $
+
+-->
+
+<meta name="description" content="게임 개발 위키위키">
+<meta name="keywords" content="위키위키, WikiWiki, 게임 개발, 게임 제작, 게임 프로그래밍">
+<!-- <meta name="robots" content="index,follow"> -->
+<title>LuaTinker Manual</title>
+<link rel="stylesheet" title="phpwiki" href="./LuaTinker Manual_files/phpwiki.css" type="text/css">
+<script type="text/javascript" src="./LuaTinker Manual_files/dbwiki.js"></script>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./LuaTinker Manual_files/translateelement.css"><script type="text/javascript" charset="UTF-8" src="./LuaTinker Manual_files/main_zh-CN.js"></script><script type="text/javascript" charset="UTF-8" src="./LuaTinker Manual_files/element_main.js"></script></head>
+<body>
+<a name="pagetop"></a>
+<form action="http://gpgstudy.com/gpgiki/TitleSearch" method="get">
+<table class="toolbar" width="100%" cellspacing="0">
+<tbody><tr>
+	<td width="100px">
+	<a href="http://gpgstudy.com/gpgiki/HomePage"><img src="./LuaTinker Manual_files/gpgiki.png" border="0" alt="[GpGiki to Main Page]"></a>
+	</td>
+
+	<td width="100%" align="center">
+		<h1><a href="http://gpgstudy.com/gpgiki/BackLinks?page=LuaTinker%20Manual" class="backlinks" title="Get BackLinks for LuaTinker Manual" onmouseover="window.status=&#39;Get BackLinks for LuaTinker Manual&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;"><font><font>LuaTinker Manual</font></font></a></h1>
+
+	</td>
+</tr>
+</tbody></table>
+
+<table class="navbar" cellspacing="0" width="100%">
+<tbody><tr>
+	<td align="left">
+<b><font><font>GpGiki: </font></font></b>
+ <a class="wikilink" href="http://gpgstudy.com/gpgiki/FindPage"><font><font>Search page</font></font></a>
+ <span><input type="hidden" name="auto_redirect" value="1">
+	<input type="text" name="s" size="20" title="Quick Search" onmouseover="window.status=&#39;Quick Search&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;"></span><font><font>|
+ </font></font><a class="wikilink" href="http://gpgstudy.com/gpgiki/RecentChanges"><font><font>changed pages</font></font></a><font><font> |
+ </font></font><a class="wikilink" href="http://gpgstudy.com/gpgiki/%B5%B5%BF%F2%B8%BB"><font><font>Help</font></font></a><font><font> |
+ </font></font><a class="wikilink" href="http://gpgstudy.com/gpgiki/UserPreferences"><font><font>User Settings</font></font></a>
+
+  </td>
+</tr>
+<tr>
+	<td align="right">
+	<b><font><font>This Page: </font></font></b>
+		  		<a class="wikiaction" href="http://gpgstudy.com/gpgiki/LuaTinker%20Manual?action=edit"><font><font>Edit</font></font></a><font><font> |
+	  			 </font></font><a class="wikiaction" href="http://gpgstudy.com/gpgiki/LuaTinker%20Manual?action=info"><font><font>Information</font></font></a><font><font>   |
+		   </font></font><a class="wikiaction" href="http://gpgstudy.com/gpgiki/LuaTinker%20Manual?action=diff&previous=major"><font><font>difference</font></font></a><font><font>   |
+		 </font></font><a class="wikiaction" href="http://gpgstudy.com/gpgiki/LikePages?page=LuaTinker%20Manual"><font><font>Similar Pages</font></font></a><font><font> |
+	 </font></font><a class="wikiaction" href="http://gpgstudy.com/gpgiki/LinkMap?page=LuaTinker%20Manual"><font><font>ringkeumaep</font></font></a><font><font> |
+	 </font></font><a class="wikiaction" href="http://gpgstudy.com/gpgiki/LuaTinker%20Manual?action=html"><font><font>HTML</font></font></a>	
+	</td>
+</tr>
+</tbody></table>
+
+</form>
+
+<!--FIXME: this link is broken unless pages are in pathinfo -->
+<!--<a title="Get BackLinks for LuaTinker Manual"
+   onmouseover="window.status='Get BackLinks for LuaTinker Manual';return true;"
+   class="backlinks"
+   href="BackLinks?page=LuaTinker%20Manual"
+   ><span class="wikiword">LuaTinker Manual</span></a>-->
+<div class="br"><br clear="all"></div>
+
+<!-- 본문 시작 -->
+<div class="wikitext"><img src="./LuaTinker Manual_files/logo.gif">
+<p><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> Manual
+</font></font></p>
+
+<h4 id="header1"><font><font>Prior to proceeding.</font></font></h4>
+
+<p><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> the Boost.Python or </font></font><a href="http://gpgstudy.com/gpgiki/LuaBind" class="wiki"><font><font>LuaBind</font></font></a><font><font> and to have a similar form could be written. </font><font>So much for the Boost libraries and culminated similar shape, but because it does not use Boost grammar jeokeurona many other people believe is lacking. </font><font>Improvements or the code is always welcome your comments about ripping off code can fix anything that would be great working comfort.
+</font></font></p>
+<p><font><font>This manual is currently May 27, 2005, the code is written in standard.
+</font></font></p>
+<p><em><font><font>The current support</font></font></em>
+</p>
+<ul>
+<li><font><font>So that you can call Lua functions defined in
+</font></font></li>
+<li><font><font class="">Classes and class functions and variables defined to allow access from Lua
+</font></font></li>
+<li><font><font>To be able to call Lua functions defined in the definition
+</font></font></li>
+<li><font><font>Define an inheritance relationship (currently supports a step stability is insufficient for the pointer).
+</font></font></li>
+<li><font><font>Lua global variables and global pointers declared as
+</font></font></li>
+</ul>
+<p><em><font><font>To add further details of the</font></font></em>
+</p>
+<ul>
+<li><font><font>Features real-time Type Checking
+</font></font></li>
+<li><font><font>Support for operator overloading
+</font></font></li>
+<li><font><font>Inheritance and multiple inheritance support safe
+</font></font></li>
+<li><font><font>The various error output
+</font></font></li>
+<li><font><font>River. Force one. </font><font>Debugging features
+</font></font></li>
+</ul>
+<p><em><font><font>Example, consider</font></font></em>
+</p>
+<p><font><font>Resources are registered in a best way is to see an example. </font><font>Usage with a simple example because it contains a few when you take advantage of this part is thought shall be no greater difficulty. </font><font>The following functions in order to deal with the law, how to manipulate the class, how to use it in Lua, and I'll mention. </font><font>T in the template below that of the typename and generally give the classes are put. </font><font>See the example and is registered in the Archives ... </font><font>(Source olrinhu later update)
+</font></font></p>
+
+<h4 id="header2"><font><font>The initialization LuaTinker</font></font></h4>
+
+<p><em><font><font>lua_state :: open (L)</font></font></em>
+</p>
+<p><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> generated from a Lua lua_state * indicating the operation. </font><font>If you call this function </font></font><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> inside are expected to be set globally declared value. </font><font>If the current multiple lua_state declared are working without a home.
+</font></font></p>
+<p><em><font><font>luabind :: open (L)</font></font></em>
+</p>
+<p><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> now syntactically </font></font><a href="http://gpgstudy.com/gpgiki/LuaBind" class="wiki"><font><font>LuaBind</font></font></a><font><font> interface is built to be compatible with. </font><font>Some parts are functionally incompatible </font></font><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> unique features being added constantly, so we can not help a great grammatical compatibility, but </font></font><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> If you do not need to own a unique function through changing the namespace simply by changing the two libraries to write You can. </font><font>NOTICE for this </font></font><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> was briefly mentioned in the Introduction page, I mean, I know I did not try to use the test beyond the scope of the future will be further expanded by the compatibility relations are not amortized, but still leave the relevant interface is planned.
+</font></font></p>
+
+<h4 id="header3"><font><font>How to handle function</font></font></h4>
+
+<p><em><font><font>def (name, func)</font></font></em>
+</p>
+<p><font><font>Lua is a function of what reminds exposure. </font><font>The function name is visible to the name that corresponds to the func hyphen is the normal function. </font><font>For example, int test () if there is a C function, which
+</font></font></p>
+<pre><font><font> def ("test", test);</font></font>
+
+</pre>
+<p><font><font>Lua side, give that to define
+</font></font></p>
+<pre><font><font> test ()</font></font>
+
+</pre>
+<p><font><font>As a general call that will enable it globally.
+</font></font></p>
+<p><em><font><font>call &lt;RVal&gt; (name, ...)</font></font></em>
+</p>
+<p><font><font>This function is declared across the Lua function to call any functions that return is received. </font><font>Returns the side of a Lua function, if you do not return </font></font><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> appropriate value so that it reads on him trying to return values ​​are 0 or NULL. </font><font>If the Lua side if you have the following functions
+</font></font></p>
+<pre><font><font>Test function (name, value) </font></font><font><font>
+ 	print (name, value) </font></font><font><font>
+ 	Return "end" </font></font><font><font>
+ end</font></font>
+
+</pre>
+<p><font><font>It calls the C + + side when
+</font></font></p>
+<pre><font><font> const char * rval = call &lt;const char*&gt; ("test", "zupet", 10);</font></font>
+
+</pre>
+<p><font><font>As you can call. </font><font>Lua side, and thereby return the correct value is returned, otherwise the appropriate NULL pointer is returned. </font><font>This </font></font><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> because we try to find within the appropriate cast explicitly required nexus because const char * lua_tostring () is the result of a call received. </font><font>Check the correct type during execution because the current Lua types to get your side if the cautious approach is needed.
+</font></font></p>
+
+<h4 id="header4"><font><font>How to handle a class</font></font></h4>
+
+<p><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> metatable the userdata using taip and its labeled to represent one instance. </font><font>metatable the index, newindex direct implementation of the user when any class member function calls the appropriate function it will put me in return. </font><font>Different instances, each with a separate allocation userdata but because all share metatable </font></font><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> pointer that is passed to the heavy burden they are to be used without attaching metatable ten thousand.
+</font></font></p>
+<p><em><font><font>class_ &lt;[T]&gt; (name)</font></font></em>
+</p>
+<p><font><font>T is defined as a class in C + + to Lua is an object side to declare. </font><font>class_ constructor with an instance of the template to generate a new table called name will declare it as global. </font><font>This table for the new instance to be used as a basic metatable __ index, __ newindex, __ gc and is expected to be defined.
+</font></font></p>
+<p><em><font><font>. Def (name, func)</font></font></em>
+</p>
+<p><font><font>Lua functions convert one of the members of class_ &lt;T&gt; exposed for classes of functions will expose. </font><font>Using the basic definition above, if you define a generic function perfectly, but if you have an overloaded function must explicitly define the function type.
+</font></font></p>
+<p><em><font><font>. Def_readwrite (name, variable)</font></font></em>
+</p>
+<p><font><font>Lua is one of the members of class_ &lt;T&gt; commands: For a class member variables exposed are exposing. </font></font><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> always read / write data type only for the open and expose diarrhea defined as const doeeoseo immutable force, even if the object on makes the value of which can read and write. </font><font>Silhaengdoeneunjung you originally declared in Lua types and try to assign another value to 0 or NULL is filled.
+</font></font></p>
+<p><em><font><font>. Inh &lt;P&gt; ()</font></font></em>
+</p>
+<p><font><font>Lua functions convert one of the members of class_ &lt;T&gt; exposed class inherits from the parent object of P received taip define what is to give. </font><font>If you have not defined the P taip This function does not inherit the work in progress. </font><font>Inheritance is currently only available for one parent and multiple levels of inheritance is received, normally recognized in Lua.
+</font></font></p>
+
+<h4 id="header5"><font><font>Convenience of an object passing</font></font></h4>
+
+<p><em><font><font>decl (name, value)</font></font></em>
+</p>
+<p><font><font>This is simply the value of value declared in the global Lua makes. </font><font>It varies from an object that can be declared if it is appropriate to put a pointer excused if the copy is just an instance can be safely delivered to the foundation. </font><font>I and many managers do not need to exist in one piece on the program for a single object, which is used throughout all of these things easier in many ways, can be used to make the declaration.
+</font></font></p>
+<p><span class="inline_quote"><font><font>C + + code.</font></font></span>
+</p>
+<pre><font><font>class Renderer { </font></font><font><font>
+ 	void SetBgColor (int r, int g, int b); </font></font><font><font>
+ }; </font></font><font><font>
+ Renderer g_renderer; </font></font><font><font>
+ class_ &lt;Renderer&gt; ("Renderer") </font></font><font><font>
+ 	. def ("SetBgColor", Renderer :: SetBgColor) </font></font><font><font>
+ 	; </font></font><font><font>
+ decl ("g_renderer", &amp; g_renderer );</font></font>
+
+</pre>
+<p><span class="inline_quote"><font><font>Lua code</font></font></span>
+</p>
+<pre><font><font> g_renderer: SetBgColor (0, 0, 255)</font></font>
+
+</pre>
+<p><em><font><font>struct lua_value {};</font></font></em>
+</p>
+<p><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> very powerful feature of </font></font><a href="http://gpgstudy.com/gpgiki/LuaTinker" class="wiki"><font><font>LuaTinker</font></font></a><font><font> struct push_ {} as defined in the struct pop_ {} object. </font><font>Each of these two objects C + + -&gt; Lua or Lua -&gt; C + + to pass a value to a template that does the work through this very simple deulyigo Lua and C + + code to communicate with each other continues to grow. </font><font>(The best example of a function call is to look at the implementation part.)
+</font></font></p>
+<p><font><font>But lua_value push_ object is given a special value. </font><font>This type of type inherit the parent object is declared in the state to show themselves to Lua type are </font><font>As a simple example to explain the sentence rather than the side I hope I will be easy.
+</font></font></p>
+<p><span class="inline_quote"><font><font>C + + code.</font></font></span>
+</p>
+<pre><font><font>ampere class { </font></font><font><font>
+ }; </font></font><font><font>
+ class B: Public Amperes { </font></font><font><font>
+ 	bool DOB () {printf ("this is B!!!");} </font></font><font><font>
+ }; </font></font><font><font>
+ amp * FindObject (const char * name) {/ * do something he inherited genotype A will return * /} </font></font><font><font>
+ def ("FindObject", FindObject);</font></font>
+
+</pre>
+<p><span class="inline_quote"><font><font>Lua code</font></font></span>
+</p>
+<pre><font><font>local temp = FindObject ("B") </font></font><font><font>
+ temp: DOB () - Error</font></font>
+
+</pre>
+<p><font><font>If the above call to Lua in C + + objects of type B with two neomeogalttae A parent will be delivered in the form of a gaekchyeo. </font><font>Therefore, the script was handed over to an instance of B, not A and B in the extended recognition interface or may not be able to function at all. </font><font>Thus, the type push_ lua_value If you get the object type directly instead of passing it on to the Lua data type to pass to lua_value will delegate the work.
+</font></font></p>
+<pre><font><font>lua_value struct </font></font><font><font>
+ { </font></font><font><font>
+ 	Virtual void to_lua (lua_State * L) = 0; </font></font><font><font>
+ };</font></font>
+
+</pre>
+<p><font><font>This usage is as follows:
+</font></font></p>
+<p><span class="inline_quote"><font><font>C + + code.</font></font></span>
+</p>
+<pre><font><font>ampere class: Public lua_value { </font></font><font><font>
+ 	void to_lua (lua_State * L) {push_ :: Invoke (this); </font></font><font><font>
+ }; </font></font><font><font>
+ class B: Public Amperes { </font></font><font><font>
+ 	bool DOB () {printf ("this is B!!!");} </font></font><font><font>
+ 	void to_lua (lua_State * L) {push_ :: Invoke (this); </font></font><font><font>
+ }; </font></font><font><font>
+ ampere * FindObject (const char * name) {/ * A genotype inherited something he will return * /} </font></font><font><font>
+ def ("FindObject", (lua_value * ) (* (const char *)) FindObject);</font></font>
+
+</pre>
+<p><font><font>If you want to expand a little above code push_ object directly without using a pointer passed lua_value :: to_lua () function by calling the station will be delegated by giving the data flow. </font><font>If you run the above code, the type of test according to their type will be input. </font><font>When you see the above code in Lua are listed below.
+</font></font></p>
+<p><span class="inline_quote"><font><font>Lua code</font></font></span>
+</p>
+<pre><font><font class="goog-text-highlight">local temp = FindObject ("amps") </font></font><font><font class="goog-text-highlight">
+ temp: DOB () - Error (amp is not the B interface is taip) </font></font><font><font class="goog-text-highlight">
+ temp = FindObject ("B") </font></font><font><font class="goog-text-highlight">
+ temp: DOB () - OK (B nexus requirement Since B is OK to return taip)</font></font>
+
+</pre>
+<p><font><font>Implementation of the above is necessary because the class that inherits a virtual function alone can expose the implementation of the class because all. </font><font>Of course, all of the interfaces to support creating a virtual function, but the complexity of the code for Lua and C + + code, thought to be too many sacrifices to avoid it just because of the declaration will lua_value. </font><font>Implement all these functions, the MFC is not declared virtual and similar reasons, and limited in Lua in C + + inheritance structure intact without being followed more convenient to access all objects will be implemented.
+</font></font></p>
+<p><font><font>ps manual is written. </font><font>Library hours are updated, as I'll upload a 0.2 version.
+</font></font></p>
+</div>
+<!-- 본문 끝 -->
+
+<br>
+<a name="controlbox"></a>
+
+<!-- I would like not to have to use these tables, and managed to
+	 get this stuff to work more or less correctly using
+	 CSS's float:left; and float:right;.  However float:right; seems
+	 to cause MSIE4.01/NT to hang.
+	 So, we use tables...  -->
+
+<table class="toolbar" width="100%" border="0">
+<tbody><tr align="right">
+	<td>
+	<small><a href="http://gpgstudy.com/gpgiki/LuaTinker%20Manual#pagetop"><font><font>First up</font></font></a></small>
+	</td>
+</tr>
+<tr>
+  <td><font><font>
+		  Last Modified Date: April 21 (2006) 08:49 PM
+			 </font></font><a class="wikiaction" href="http://gpgstudy.com/gpgiki/LuaTinker%20Manual?action=edit"><font><font>Edit</font></font></a><font><font> |
+		 </font></font><a class="wikiaction" href="http://gpgstudy.com/gpgiki/LuaTinker%20Manual?action=info"><font><font>Information</font></font></a><font><font>   |
+		   </font></font><a class="wikiaction" href="http://gpgstudy.com/gpgiki/LuaTinker%20Manual?action=diff&previous=major"><font><font>difference</font></font></a><font><font> 
+	  | </font></font><a class="wikiaction" href="http://gpgstudy.com/gpgiki/LikePages?page=LuaTinker%20Manual"><font><font>Similar Pages </font></font></a>
+   <a href="http://gpgstudy.com/gpgiki/DebugInfo?page=LuaTinker%20Manual" class="wikiaction" title="Get debugging information for LuaTinker Manual." onmouseover="window.status=&#39;Get debugging information for LuaTinker Manual.&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;"><font><font>DebugInfo</font></font></a>
+	</td>
+</tr>
+<tr>
+	<td><font><font>
+Useful pages: 
+ </font></font><a class="wikilink" href="http://gpgstudy.com/gpgiki/%BA%D0%B7%F9%20%BA%D0%B7%F9"><font><font>Classification Classification</font></font></a><font><font> | Free Practice </font></font><a class="wikilink" href="http://gpgstudy.com/gpgiki/SandBox"><font><font>SandBox</font></font></a><font><font> | random pages </font></font><a class="wikilink" href="http://gpgstudy.com/gpgiki/RandomPages"><font><font>RandomPages</font></font></a><font><font> | popular pages </font></font><a class="wikilink" href="http://gpgstudy.com/gpgiki/MostPopular"><font><font>MostPopular</font></font></a>
+
+  <!-- | <a class="wikiaction" href="LikePages?page=LuaTinker%20Manual">LikePages</a> -->
+	<!-- For debugging only, really: -->
+
+	</td>
+</tr>
+</tbody></table><div id="goog-gt-tt" class="goog-tooltip skiptranslate" dir="ltr" style="visibility: visible; left: 473px; top: 4068px; display: block; "><div style="padding: 8px;"><div><div class="logo"><img src="./LuaTinker Manual_files/translate-32.png" width="20" height="20"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">原文</h1></div><div class="middle" style="padding: 8px;"><div class="original-text">local temp = FindObject("A")
+ temp:DoB() -- error (A 는 B 타잎이 아니므로 인터페이스가 없다)
+ temp = FindObject("B")
+ temp:DoB() -- ok (B 타잎을 요구해서 B 타잎이 리턴했으므로 OK 이다)</div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">提供更好的翻译建议</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none; opacity: 0; "></div></div>
+
+</body></html>
