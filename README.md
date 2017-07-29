@@ -1,4 +1,1 @@
-DesignPatternPractice
-=====================
-
-design pattern practise long long ago
+some practise
